@@ -1,0 +1,291 @@
+// Variables for reuse
+$animation-duration: 3s;
+$animation-ease: ease-in-out;
+$animation-delay: 2s;
+$rose-petal-width: 45px;
+$rose-petal-height: 80px;
+$rose-petal-background: #d52d58;
+$border-radius: 100px;
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: #122139;
+  overflow: hidden;
+}
+
+.container {
+  width: 100px;
+  height: 300px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transform: scale(0.6);
+
+  div {
+    position: absolute;
+  }
+
+  .glass {
+    height: 420px;
+    width: 250px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    border-radius: 300px 300px 0px 0px;
+    left: -80px;
+    top: -100px;
+    border-bottom: 15px solid rgba(255, 255, 255, 0.5);
+
+    &:after,
+    &:before {
+      width: 8px;
+      background: rgba(255, 255, 255, 0.28);
+      content: '';
+      position: absolute;
+      border-radius: 100px;
+    }
+
+    &:after {
+      height: 80px;
+      left: 10px;
+      top: 180px;
+    }
+
+    &:before {
+      height: 15px;
+      left: 10px;
+      top: 280px;
+    }
+  }
+
+  .glow {
+    width: 170px;
+    height: 170px;
+    border-radius: 100%;
+    border: 1px solid rgba(245, 148, 184, 0.47);
+    box-shadow: 0px 0px 10px #f594b8;
+    left: -40px;
+    top: -40px;
+    transition: all 0.5s ease;
+    animation: glowing 2.5s ease-in-out infinite;
+  }
+
+  .rose-petals {
+    > div {
+      background: $rose-petal-background;
+      width: $rose-petal-width;
+      height: $rose-petal-height;
+      position: absolute;
+      transition: all 0.5s ease-out;
+    }
+
+    > div:nth-child(1) {
+      border-radius: 15px;
+      left: 20px;
+      top: -6px;
+    }
+
+    > div:nth-child(2), 
+    > div:nth-child(4), 
+    > div:nth-child(6) {
+      border-radius: 0px 30px 0px 30px;
+      background: #b81b43;
+      left: 0;
+      transform-origin: bottom right;
+    }
+
+    > div:nth-child(3), 
+    > div:nth-child(5), 
+    > div:nth-child(7) {
+      border-radius: 30px 0px 30px 0px;
+      left: 40px;
+      transform-origin: bottom left;
+    }
+
+    > div:nth-child(2) {
+      animation: openRose2 $animation-duration $animation-ease forwards;
+      z-index: 5;
+      background: #9e183a;
+      top: 10px;
+      height: 70px;
+      animation-delay: $animation-delay;
+    }
+
+    > div:nth-child(3) {
+      animation: openRose3 $animation-duration $animation-ease forwards;
+      z-index: 4;
+      background: #9e183a;
+      top: 10px;
+      height: 70px;
+      animation-delay: $animation-delay;
+    }
+
+    > div:nth-child(4) {
+      animation: openRose4 $animation-duration $animation-ease forwards;
+      z-index: 3;
+      background: #b81b43;
+      top: 5px;
+      height: 75px;
+      animation-delay: $animation-delay;
+    }
+
+    > div:nth-child(5) {
+      animation: openRose5 $animation-duration $animation-ease forwards;
+      z-index: 2;
+      background: #b81b43;
+      top: 5px;
+      height: 75px;
+      animation-delay: $animation-delay;
+    }
+
+    > div:nth-child(6) {
+      animation: openRose6 $animation-duration $animation-ease forwards;
+      z-index: 1;
+      background: #c9204b;
+      animation-delay: $animation-delay;
+    }
+
+    > div:nth-child(7) {
+      animation: openRose7 $animation-duration $animation-ease forwards;
+      z-index: 0;
+      background: #c9204b;
+      animation-delay: $animation-delay;
+    }
+  }
+
+  .rose-leaves {
+    > div:nth-last-child(1) {
+      width: 55px;
+      height: 30px;
+      background: #338f37;
+      position: absolute;
+      top: 60px;
+      left: 15px;
+      border-radius: $border-radius;
+    }
+
+    > div:nth-child(1) {
+      width: 6px;
+      height: 230px;
+      background: #066406;
+      top: 80px;
+      left: 40px;
+    }
+  }
+
+  .thorns {
+    > div {
+      width: 30px;
+      height: 30px;
+      background: #066406;
+      top: 100px;
+      left: 10px;
+
+      &:after,
+      &:before {
+        width: 41px;
+        height: 31px;
+        background: #122139;
+        content: "";
+        position: absolute;
+        border-radius: $border-radius;
+      }
+
+      &:after {
+        left: -12px;
+        top: 17px;
+      }
+
+      &:before {
+        left: -11px;
+        top: -11px;
+        z-index: 0;
+      }
+    }
+
+    > div:nth-child(2) {
+      top: 150px;
+      transform: rotate(180deg);
+      left: 45px;
+    }
+
+    > div:nth-child(3) {
+      top: 180px;
+    }
+
+    > div:nth-child(4) {
+      top: 220px;
+      transform: rotate(180deg);
+      left: 45px;
+    }
+  }
+
+  .sparkles {
+    bottom: -40px;
+
+    > div {
+      width: 4px;
+      height: 4px;
+      border-radius: $border-radius;
+      background: #ff96c0;
+      box-shadow: 0px 0px 12px 2px #ff4e85;
+      bottom: 0;
+      opacity: 0;
+      animation: sparkle 4s ease-in-out infinite;
+
+      &:nth-child(1) {
+        left: 60px;
+        animation-delay: 3s;
+      }
+
+      &:nth-child(2) {
+        left: 158px;
+        animation-delay: 2s;
+      }
+
+      &:nth-child(3) {
+        left: -22px;
+        animation-delay: 1s;
+      }
+
+      &:nth-child(4) {
+        left: 10px;
+        animation-delay: 1s;
+      }
+
+      &:nth-child(5) {
+        left: 177px;
+        animation-delay: 3s;
+      }
+
+      &:nth-child(6) {
+        left: -82px;
+        animation-delay: 2s;
+      }
+
+      &:nth-child(7) {
+        left: 45px;
+        animation-delay: 3s;
+      }
+
+      &:nth-child(8) {
+        left: 74px;
+        animation-delay: 3s;
+      }
+
+      &:nth-child(9) {
+        left: -79px;
+        animation-delay: 2s;
+      }
+    }
+  }
+}
+
+@keyframes sparkle {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 

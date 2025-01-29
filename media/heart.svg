@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 153 153">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #800020;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #fdbcb4;
+      }
+
+      .cls-3 {
+        fill: #c51e3a;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <rect class="cls-1" x="34" y="102" width="17" height="17"/>
+      <rect class="cls-1" x="17" y="85" width="17" height="17"/>
+      <rect class="cls-1" x="34" width="34" height="17"/>
+      <rect class="cls-1" x="51" y="119" width="17" height="17"/>
+      <rect class="cls-1" x="68" y="17" width="17" height="17"/>
+      <rect class="cls-1" x="68" y="136" width="17" height="17"/>
+      <rect class="cls-1" x="85" width="34" height="17"/>
+      <rect class="cls-1" x="102" y="102" width="17" height="17"/>
+      <rect class="cls-1" x="119" y="17" width="17" height="17"/>
+      <rect class="cls-1" x="119" y="85" width="17" height="17"/>
+      <rect class="cls-1" y="34" width="17" height="51"/>
+      <rect class="cls-1" x="85" y="119" width="17" height="17"/>
+      <rect class="cls-1" x="136" y="34" width="17" height="51"/>
+      <rect class="cls-1" x="17" y="17" width="17" height="17"/>
+    </g>
+    <polygon class="cls-3" points="136 34 136 85 119 85 119 102 102 102 102 119 85 119 85 136 68 136 68 119 51 119 51 102 34 102 34 85 17 85 17 34 34 34 34 17 68 17 68 34 85 34 85 17 119 17 119 34 136 34"/>
+    <rect class="cls-2" x="34" y="17" width="17" height="17"/>
+    <rect class="cls-2" x="17" y="34" width="17" height="17"/>
+    <rect class="cls-2" x="85" y="68" width="17" height="17"/>
+  </g>
+</svg>
