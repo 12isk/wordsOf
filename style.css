@@ -62,7 +62,7 @@ h1 {
     font-size: 50px;
     color: #800020;
     /* margin-right: 20px; */
-    margin-bottom: 0;
+    margin-bottom: 50px;
 }
 
 @media (max-width: 768px) {
@@ -78,12 +78,22 @@ h1 {
     .container{
         margin-top: 150px;
     }
+    /* .heart {
+        margin: 0px;
+    } */
 }
 
 .heart {
     width: 50px;
     height: auto;
-    margin-top: 30px;
+    /* margin: 20px; */
+}
+@media (min-width: 769px) {
+    .heart {
+        margin: 20px;
+        margin-bottom: 50px;
+    }
+    
 }
 
 .container {
