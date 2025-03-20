@@ -34,12 +34,13 @@ body {
     color: #800020;
     box-sizing: border-box;
     text-align: center;
-    padding: 12px; 
+    padding: 20px; 
 }
 
 @media (max-width: 768px) {
     .card .text {
         font-size: clamp(16px, 4vw, 20px);
+        /* margin: 10px */
     }
 }
 
@@ -60,7 +61,7 @@ h1 {
     font-family: 'Wagon';
     font-size: 50px;
     color: #800020;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     margin-bottom: 0;
 }
 
